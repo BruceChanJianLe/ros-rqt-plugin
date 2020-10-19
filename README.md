@@ -152,7 +152,7 @@ install(TARGETS ${PROJECT_NAME}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 )
 
-catkin_install_python(PROGRAMS scripts/ros_rqt_plugin
+catkin_install_python(PROGRAMS scripts/${PROJECT_NAME}
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

@@ -8,8 +8,8 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
   - [Dependencies](#Dependencies)
   - [Package Folder Structure](#Package-Folder-Structure)
 - [UI File](#UI-File)
-- [Include Path for Vscode](#Include-Path-for-Vscode)
 - [CMakeLists.txt](#CMakeListstxt)
+- [Include Path for Vscode](#Include-Path-for-Vscode)
 - [Reference](#Reference)
 
 ## Package Creation
@@ -168,6 +168,8 @@ install(DIRECTORY include/${PROJECT_NAME}/
 ```
 
 ## Include Path for Vscode
+
+To obtain the header for `#include <pose_recorder/ui_two_button.h>` please include the build folder.  
 ```json
 {
     "configurations": [

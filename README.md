@@ -8,6 +8,7 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
   - [Dependencies](#Dependencies)
   - [Package Folder Structure](#Package-Folder-Structure)
 - [UI File](#UI-File)
+- [Reference](#Reference)
 
 ## Package Creation
 
@@ -43,4 +44,8 @@ ros_rqt_plugin
 ## UI File
 
 Create your ui file with `Qt 5 Designer`.
-For more information, please look at this [video](https://www.youtube.com/watch?v=2mIyZX6x-S0)
+For more information, please look at this [video](https://www.youtube.com/watch?v=2mIyZX6x-S0).
+
+## Reference
+
+- Video lesson on UI file. [link](https://www.youtube.com/watch?v=2mIyZX6x-S0)

@@ -152,7 +152,7 @@ install(TARGETS ${PROJECT_NAME}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 )
 
-catkin_install_python(PROGRAMS scripts/rqt_image_view
+catkin_install_python(PROGRAMS scripts/ros_rqt_plugin
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
@@ -164,3 +164,5 @@ install(DIRECTORY include/${PROJECT_NAME}/
 ## Reference
 
 - Video lesson on UI file. [link](https://www.youtube.com/watch?v=2mIyZX6x-S0)
+- updated rqt_image_viewer. [link](https://github.com/ros-visualization/rqt_image_view)
+- older rqt_image_viewer. [link](https://github.com/ros-visualization/rqt_common_plugins/tree/619481f13084db01c7e2233b754bb0409ce1c44a/rqt_image_view)

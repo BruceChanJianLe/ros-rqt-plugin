@@ -36,6 +36,8 @@ ros_rqt_plugin
 ├── package.xml
 ├── plugin.xml
 ├── setup.py
+├── launch
+│   └── start.launch
 ├── resource
 │   └── ros_rqt_plugin.ui
 ├── scripts

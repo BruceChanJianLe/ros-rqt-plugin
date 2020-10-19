@@ -47,7 +47,7 @@ ros_rqt_plugin
 Create your ui file with `Qt 5 Designer`.
 For more information, please look at this [video](https://www.youtube.com/watch?v=2mIyZX6x-S0).
 
-## CMakeList.txt
+## CMakeLists.txt
 
 For the convienience of different Qt version, I have followed the exampl from `rqt_image_viewer`.
 

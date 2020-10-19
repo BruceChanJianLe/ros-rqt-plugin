@@ -27,7 +27,20 @@ rqt_gui_py
 ```
 
 ### Package Folder Structure
-
+```bash
+ros_rqt_plugin
+├── CMakeLists.txt
+├── package.xml
+├── plugin.xml
+├── include
+│   └── ros_rqt_plugin
+│       └── ros_rqt_plugin.hpp
+└── src
+    └── ros_rqt_plugin
+            ├── ros_rqt_plugin.cpp
+            └── ros_rqt_plugin.ui
+```
 ## UI File
 
-Create a 
+Create your ui file with `Qt 5 Designer`.
+For more information, please look at this [video](https://www.youtube.com/watch?v=2mIyZX6x-S0)

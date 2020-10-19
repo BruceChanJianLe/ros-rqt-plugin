@@ -166,6 +166,30 @@ install(DIRECTORY include/${PROJECT_NAME}/
 )
 ```
 
+## Include Path for Vscode
+```json
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/usr/include/**",
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/../../build/**"
+            ],
+            "name": "ROS",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+```
+
 ## Reference
 
 - Video lesson on UI file. [link](https://www.youtube.com/watch?v=2mIyZX6x-S0)

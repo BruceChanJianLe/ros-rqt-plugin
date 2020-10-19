@@ -8,8 +8,9 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
   - [Dependencies](#Dependencies)
   - [Package Folder Structure](#Package-Folder-Structure)
 - [UI File](#UI-File)
-- [Reference](#Reference)
+- [Include Path for Vscode](#Include-Path-for-Vscode)
 - [CMakeLists.txt](#CMakeListstxt)
+- [Reference](#Reference)
 
 ## Package Creation
 

@@ -49,7 +49,7 @@ For more information, please look at this [video](https://www.youtube.com/watch?
 
 ## CMakeLists.txt
 
-For the convienience of different Qt version, I have followed the exampl from `rqt_image_viewer`.
+For the convienience of different Qt version, I have followed the exampl from [rqt_template_plugin](https://github.com/marco-tranzatto/rqt_template_plugin).
 
 ```cmake
 cmake_minimum_required(VERSION 3.0.2)
@@ -164,5 +164,6 @@ install(DIRECTORY include/${PROJECT_NAME}/
 ## Reference
 
 - Video lesson on UI file. [link](https://www.youtube.com/watch?v=2mIyZX6x-S0)
+- main reference for package. [link](https://github.com/marco-tranzatto/rqt_template_plugin)
 - updated rqt_image_viewer. [link](https://github.com/ros-visualization/rqt_image_view)
 - older rqt_image_viewer. [link](https://github.com/ros-visualization/rqt_common_plugins/tree/619481f13084db01c7e2233b754bb0409ce1c44a/rqt_image_view)

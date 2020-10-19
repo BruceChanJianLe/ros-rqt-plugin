@@ -35,6 +35,11 @@ ros_rqt_plugin
 ├── CMakeLists.txt
 ├── package.xml
 ├── plugin.xml
+├── setup.py
+├── resource
+│   └── ros_rqt_plugin.ui
+├── scripts
+│   └── ros_rqt_plugin    # Remember to make it executable (chmod a+x ros_rqt_plugin)
 ├── include
 │   └── ros_rqt_plugin
 │       └── ros_rqt_plugin.hpp
@@ -85,17 +90,17 @@ catkin_python_setup()
 
 # Define source file
 set(${PROJECT_NAME}_SRCS
-  src/${PROJECT_NAME}/pose_recorder.cpp
+  src/${PROJECT_NAME}/ros_rqt_plugin.cpp
 )
 
 # Define header file
 set(${PROJECT_NAME}_HDRS
-  include/${PROJECT_NAME}/pose_recorder.hpp
+  include/${PROJECT_NAME}/ros_rqt_plugin.hpp
 )
 
 # Define ui file
 set(${PROJECT_NAME}_UIS
-  resources/two_button.ui
+  resource/two_button.ui
 )
 
 # Define include directory
@@ -151,15 +156,14 @@ install(FILES plugin.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
-# Install script as rosrun-able
-catkin_install_python(PROGRAMS scripts/${PROJECT_NAME}
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
 install(TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
+)
+
+catkin_install_python(PROGRAMS scripts/${PROJECT_NAME}
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 install(DIRECTORY include/${PROJECT_NAME}/
@@ -169,7 +173,7 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 ## Include Path for Vscode
 
-To obtain the header for `#include <pose_recorder/ui_two_button.h>` please include the build folder.  
+To obtain the header for `#include <ros_rqt_plugin/ui_ros_rqt_plugin.h>` please include the build folder.  
 ```json
 {
     "configurations": [

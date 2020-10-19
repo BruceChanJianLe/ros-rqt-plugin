@@ -100,7 +100,7 @@ set(${PROJECT_NAME}_HDRS
 
 # Define ui file
 set(${PROJECT_NAME}_UIS
-  resource/two_button.ui
+  resource/ros_rqt_plugin.ui
 )
 
 # Define include directory

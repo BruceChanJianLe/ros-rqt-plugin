@@ -1,0 +1,18 @@
+<library path="lib/libros_rqt_plugin">
+    <!-- Note that the class name must be unique, else ROS would be able to find it -->
+    <class name="Two Button Example Plugin" type="ros_rqt_plugin::two_button_plugin" base_class_type="rqt_gui_cpp::Plugin">
+        <description>
+            This is an example of two push buttons.
+        </description>
+        <qtgui>
+        <group>
+            <label>Topics</label>
+            <icon type="theme">folder</icon>
+            <statustip></statustip>
+        </group>
+        <label>Two Push Example Buttons</label>
+        <icon type="theme">applications-graphics</icon>
+        <statustip>This is an example of two push buttons.</statustip>
+        </qtgui>
+    </class>
+</library>

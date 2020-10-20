@@ -10,8 +10,26 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
 - [UI File](#UI-File)
 - [CMakeLists.txt](#CMakeListstxt)
 - [package.xml](#packagexml)
+- [plugin.xml](#pluginxml)
 - [Include Path for Vscode](#Include-Path-for-Vscode)
 - [Reference](#Reference)
+
+## Steps
+
+Note that plugin.xml class name should be unique in order for ROS to find it. Or else only the first one that registered is found.  
+
+1. Create Package
+1. Create Necessary Folders and Files
+1. Create UI file with Qt Designer
+1. Create setup.py
+1. Create scripts/ros_rqt_plugin (python file)
+1. Update package.xml (remember the export tag)
+1. Update CMakeFile.txt
+1. Compile (catkin_make)
+1. Create and update include/ros_rqt_plugin/ros_rqt_plugin.hpp
+1. Create and update src/ros_rqt_plugin/ros_rqt_plugin.cpp
+1. Compile (catkin_make)
+1. Create launch file (start.launch)
 
 ## Package Creation
 
@@ -55,6 +73,7 @@ ros_rqt_plugin
 
 Create your ui file with `Qt 5 Designer`.
 For more information, please look at this [video](https://www.youtube.com/watch?v=2mIyZX6x-S0).
+![image](images/qt5_designer.png)
 
 ## CMakeLists.txt
 
@@ -217,6 +236,62 @@ Do not forget to add export tag correctly.
     <rqt_gui plugin="${prefix}/plugin.xml"/>
   </export>
 </package>
+```
+
+## plugin.xml
+
+Note that the class name must be unique, else ROS would be able to find it.  
+
+```xml
+<library path="lib/libros_rqt_plugin">
+    <!-- Note that the class name must be unique, else ROS would be able to find it -->
+    <class name="Two Button Example Plugin" type="ros_rqt_plugin::two_button_plugin" base_class_type="rqt_gui_cpp::Plugin">
+        <description>
+            This is an example of two push buttons.
+        </description>
+        <qtgui>
+        <group>
+            <label>Topics</label>
+            <icon type="theme">folder</icon>
+            <statustip></statustip>
+        </group>
+        <label>Two Push Example Buttons</label>
+        <icon type="theme">applications-graphics</icon>
+        <statustip>This is an example of two push buttons.</statustip>
+        </qtgui>
+    </class>
+</library>
+```
+
+**Explanation**:  
+```md
+- library@path: The package-relative path which gets added to sys.path. 
+
+- library/class@name: The name of the plugin, which must be unique within a package. 
+
+- library/class@type: The concatenated name of the package, module and class, which is used for the import statement. (Form: package.module.class) 
+
+- library/class@base_class_type: For Python plugins which use the rospy client library the value is rqt_gui_py::Plugin. 
+
+- library/description: The description of the plugin. 
+
+- library/qtgui: This tag contains additional optional information about the package. If none are provided, the name of the plugin is used as the label for the plugin in the menu and the description is displayed as a status tip.
+
+    - library/qtgui/group (optional, multiple): Enables grouping of plugins. Group tags can contain a label, icon and statustip tag. The groups form a hierarchy of menus where the plugin is added as the leaf. The groups of different plugins are merged based on their label (icons and statustip may be overridden by other plugins when they are defined differently). 
+
+    - library/qtgui/label: Overrides the label with which the plugin appears in the menu. 
+
+    - library/qtgui/icon: Defines the icon that should be shown beside the label (depending on the type of attribute). 
+
+    - library/qtgui/icon@type: 
+
+        - file (default): the icon value is a package-relative path to an image.
+
+        - theme: the icon value names an icon defined by the Icon Naming Specification.
+
+        - resource: the icon value names a Qt resource. 
+
+    - library/qtgui/statustip: Overrides the status tip that is shown when hovering over the plugin label. 
 ```
 
 ## Include Path for Vscode

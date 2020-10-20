@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_rqt_plugin</name>
+  <version>0.0.0</version>
+  <description>The ros_rqt_plugin package</description>
+
+  <maintainer email="jianle001@e.ntu.edu.sg">Bruce Chan Jian Le</maintainer>
+  <license>BSD</license>
+  <url type="website">https://github.com/BruceChanJianLe/ros-rqt-plugin</url>
+  <author email="jianle001@e.ntu.edu.sg">Bruce Chan Jian Le</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>rqt_gui</build_depend>
+  <build_depend>rqt_gui_cpp</build_depend>
+  <build_depend>rqt_gui_py</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>rqt_gui</build_export_depend>
+  <build_export_depend>rqt_gui_cpp</build_export_depend>
+  <build_export_depend>rqt_gui_py</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>rqt_gui</exec_depend>
+  <exec_depend>rqt_gui_cpp</exec_depend>
+  <exec_depend>rqt_gui_py</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+
+  <export>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+  </export>
+</package>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="name" value="ros_rqt_plugin"/>
+  <!-- Launch node -->
+  <node name="$(arg name)" pkg="ros_rqt_plugin" type="ros_rqt_plugin" output="screen"/>
+
+</launch>

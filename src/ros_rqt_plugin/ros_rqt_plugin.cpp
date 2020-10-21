@@ -36,8 +36,8 @@ namespace ros_rqt_plugin
         msg_.data = true;
 
         // Connect Qt Widgets
-        connect(ui_.pushButton_1, SIGNAL(pressed()), this, SLOT(buttton_1_callback_()));
-        connect(ui_.pushButton_2, SIGNAL(pressed()), this, SLOT(buttton_2_callback_()));
+        connect(ui_.pushButton_1, SIGNAL(pressed()), this, SLOT(button_1_callback_()));
+        connect(ui_.pushButton_2, SIGNAL(pressed()), this, SLOT(button_2_callback_()));
     }
 
     void two_button_plugin::shutdownPlugin()

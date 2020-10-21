@@ -1,7 +1,8 @@
-<library path="lib/libros_rqt_plugin">
+<library path="src">
     <!-- Note that the class name must be unique, else ROS would be able to find it -->
     <!-- The class name also need to follow the "namespace/class_name" convention in order to work properly -->
-    <class name="ros_rqt_plugin/two_button_plugin" type="ros_rqt_plugin::two_button_plugin" base_class_type="rqt_gui_cpp::Plugin">
+    <!-- Note that base_class_type changes according to cpp or py -->
+    <class name="BUTTONS" type="ros_rqt_plugin.plugin.Buttons" base_class_type="rqt_gui_py::Plugin">
         <description>
             This is an example of two push buttons.
         </description>

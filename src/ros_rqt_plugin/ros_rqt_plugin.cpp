@@ -18,12 +18,26 @@ namespace ros_rqt_plugin
     {
         // Access standalone command line arguments
         QStringList argv = context.argv();
+
         // Create QWidget
         widget_ = new QWidget();
+
         // Extend the widget with all attributes and children from UI file
         ui_.setupUi(widget_);
+
         // add widget to the user interface
         context.addWidget(widget_);
+
+        // Define ROS publishers
+        buttton_1_pub_ = getNodeHandle().advertise<std_msgs::Bool>("button_1_topic", 1);
+        buttton_2_pub_ = getNodeHandle().advertise<std_msgs::Bool>("button_2_topic", 1);
+
+        // Declare ROS msg_
+        msg_.data = true;
+
+        // Connect Qt Widgets
+        connect(ui_.pushButton_1, SIGNAL(pressed()), this, SLOT(buttton_1_callback_()));
+        connect(ui_.pushButton_2, SIGNAL(pressed()), this, SLOT(buttton_2_callback_()));
     }
 
     void two_button_plugin::shutdownPlugin()
@@ -45,6 +59,18 @@ namespace ros_rqt_plugin
     )
     {
         ;
+    }
+
+    void two_button_plugin::button_1_callback_()
+    {
+        // Publish msg_ as true
+        buttton_1_pub_.publish(msg_);
+    }
+
+    void two_button_plugin::button_2_callback_()
+    {
+        // Publish msg_ as true
+        buttton_2_pub_.publish(msg_);
     }
 
 } // namespace ros_rqt_plugin

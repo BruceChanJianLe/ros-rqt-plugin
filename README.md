@@ -11,6 +11,7 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
 - [CMakeLists.txt](#CMakeListstxt)
 - [package.xml](#packagexml)
 - [plugin.xml](#pluginxml)
+- [script/ros_rqt_plugin](#script/ros_rqt_plugin)
 - [Recompile](#Recompile)
 - [Include Path for Vscode](#Include-Path-for-Vscode)
 - [Reference](#Reference)
@@ -294,6 +295,28 @@ Note that the class name must be unique, else ROS would be able to find it.
         - resource: the icon value names a Qt resource. 
 
     - library/qtgui/statustip: Overrides the status tip that is shown when hovering over the plugin label. 
+```
+
+## script/ros_rqt_plugin
+
+This script directory stores a python script that will launch the rqt package.  
+Please follow the naming convention in order for the package to work properly.  
+
+```python
+#!/usr/bin/env python
+
+import sys
+
+from rqt_gui.main import Main
+
+
+main = Main()
+sys.exit(main.main(
+    sys.argv,
+    # Note to follow the this structure to launch correctly
+    # 'namespace/class_name'
+    standalone='ros_rqt_plugin/two_button_plugin'
+))
 ```
 
 ## Recompile

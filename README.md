@@ -4,7 +4,7 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
 
 ![image](images/result.png)
 
-At the moment only cpp version is updated. Python version will be updated on another branch soon.  
+This is the python version.  
 
 ## Content
 - [Content](#Content)

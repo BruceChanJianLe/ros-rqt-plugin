@@ -2,6 +2,10 @@
 
 This repository demonstrates the usage of using ROS rqt plugin to design personal UI interface with both cpp and python.
 
+![image](images/result.png)
+
+At the moment only cpp version is updated. Python version will be updated on another branch soon.  
+
 ## Content
 - [Content](#Content)
 - [Package Creation](#Package-Creation)

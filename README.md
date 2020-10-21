@@ -11,6 +11,7 @@ This repository demonstrates the usage of using ROS rqt plugin to design persona
 - [CMakeLists.txt](#CMakeListstxt)
 - [package.xml](#packagexml)
 - [plugin.xml](#pluginxml)
+- [Recompile](#Recompile)
 - [Include Path for Vscode](#Include-Path-for-Vscode)
 - [Reference](#Reference)
 
@@ -293,6 +294,17 @@ Note that the class name must be unique, else ROS would be able to find it.
 
     - library/qtgui/statustip: Overrides the status tip that is shown when hovering over the plugin label. 
 ```
+
+## Recompile
+
+This section inform user when to recompile thier when there's changes.  
+
+When changes happen to the following files, please run `catkin_make` again.
+
+1. plugin.xml
+1. scripts/ros_rqt_plugin
+1. include/ros_rqt_plugin/ros_rqt_plugin.hpp
+1. src/ros_rqt_plugin/ros_rqt_plugin.cpp
 
 ## Include Path for Vscode
 

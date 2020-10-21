@@ -6,6 +6,8 @@
 #include <ui_ros_rqt_plugin.h>
 #include <QWidget>
 
+#include <std_msgs/Bool.h>
+
 
 namespace ros_rqt_plugin
 {
@@ -32,6 +34,17 @@ namespace ros_rqt_plugin
         private:
             Ui::two_button ui_;
             QWidget * widget_;
+
+        protected:
+            // ROS declaration
+            ros::Publisher buttton_1_pub_;
+            ros::Publisher buttton_2_pub_;
+            std_msgs::Bool msg_;
+
+        private Q_SLOTS:
+            // Qt callback function
+            void button_1_callback_();
+            void button_2_callback_();
     };
 } // ros_rqt_plugin 
 

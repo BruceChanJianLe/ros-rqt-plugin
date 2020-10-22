@@ -2,7 +2,7 @@
 <package format="2">
   <name>ros_rqt_plugin</name>
   <version>0.0.0</version>
-  <description>The ros_rqt_plugin package</description>
+  <description>The ros_rqt_plugin package. Python version.</description>
 
   <maintainer email="jianle001@e.ntu.edu.sg">Bruce Chan Jian Le</maintainer>
   <license>BSD</license>

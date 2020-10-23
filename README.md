@@ -367,3 +367,4 @@ To obtain the header for `#include <ros_rqt_plugin/ui_ros_rqt_plugin.h>` please 
 - updated rqt_image_viewer. [link](https://github.com/ros-visualization/rqt_image_view)
 - older rqt_image_viewer. [link](https://github.com/ros-visualization/rqt_common_plugins/tree/619481f13084db01c7e2233b754bb0409ce1c44a/rqt_image_view)
 - rqt plugin examples. [link](http://wiki.ros.org/rqt/Plugins)
+- reference to other people github tutorial if you are so incline. [link](https://github.com/how-chen/rqt_mypkg)

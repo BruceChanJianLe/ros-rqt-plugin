@@ -2,7 +2,7 @@
     <!-- Note that the class name must be unique, else ROS would be able to find it -->
     <!-- The class name also need to follow the "namespace/class_name" convention in order to work properly -->
     <!-- Note that base_class_type changes according to cpp or py -->
-    <class name="BUTTONS" type="ros_rqt_plugin.plugin.Buttons" base_class_type="rqt_gui_py::Plugin">
+    <class name="Buttons" type="ros_rqt_plugin.ros_rqt_plugin.Buttons" base_class_type="rqt_gui_py::Plugin">
         <description>
             This is an example of two push buttons.
         </description>

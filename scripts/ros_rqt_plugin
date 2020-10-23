@@ -9,6 +9,6 @@ main = Main()
 sys.exit(main.main(
     sys.argv,
     # Note to follow the this structure to launch correctly
-    # 'namespace/class_name'
-    standalone='ros_rqt_plugin/two_button_plugin'
+    # '(after src directory name)/(python file name)/(class name)'
+    standalone='ros_rqt_plugin.ros_rqt_plugin.Buttons'
 ))

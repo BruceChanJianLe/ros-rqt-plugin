@@ -7,6 +7,10 @@ import rospkg
 from qt_gui.plugin import Plugin
 from python_qt_binding import loadUi
 from python_qt_binding.QtWidgets import QWidget
+# For add refresh infrom of button
+# from python_qt_binding.QtGui import QIcon
+
+from std_msgs.msg import Bool
 
 
 class Buttons(Plugin):
@@ -46,6 +50,21 @@ class Buttons(Plugin):
         # Add widget to the user interface
         context.add_widget(self._widget)
 
+        # Define ROS publisher
+        self.button_1_pub = rospy.Publisher('button_1_topic', Bool, queue_size=1)
+        self.button_2_pub = rospy.Publisher('button_2_topic', Bool, queue_size=1)
+
+        # Define ROS msg
+        self.msg = True
+
+        # You can set button icon like so
+        # For add refresh infrom of button
+        # self._widget.pushButton_1.setIcon(QIcon.fromTheme('view-refresh'))
+
+        # Connecting widget and ui
+        self._widget.pushButton_1.pressed.connect(self.button_1_callback)
+        self._widget.pushButton_2.pressed.connect(self.button_2_callback)
+
     def shutdown_plugin(self):
         # TODO unregister all publishers here
         pass
@@ -65,3 +84,9 @@ class Buttons(Plugin):
         # This will enable a setting button (gear icon) in each dock widget
         # title bar
         # Usually used to open a modal configuration dialog
+
+    def button_1_callback(self):
+        self.button_1_pub.publish(self.msg)
+
+    def button_2_callback(self):
+        self.button_2_pub.publish(self.msg)

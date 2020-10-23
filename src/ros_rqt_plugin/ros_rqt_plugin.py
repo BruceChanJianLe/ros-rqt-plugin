@@ -67,7 +67,8 @@ class Buttons(Plugin):
 
     def shutdown_plugin(self):
         # TODO unregister all publishers here
-        pass
+        self.button_1_pub.unregister()
+        self.button_2_pub.unregister()
 
     def save_settings(self, plugin_settings, instance_settings):
         # TODO save intrinsic configuration, usually using:

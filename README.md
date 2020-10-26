@@ -28,7 +28,7 @@ Note that plugin.xml class name should be unique in order for ROS to find it. Or
 1. Create Necessary Folders and Files
 1. Create UI file with Qt Designer
 1. Create setup.py
-1. Create scripts/ros_rqt_plugin (python file)
+1. Create scripts/ros_rqt_plugin (python file `chmod a+x ros_rqt_plugin`)
 1. Update package.xml (remember the export tag)
 1. Update CMakeFile.txt
 1. Compile (catkin_make)

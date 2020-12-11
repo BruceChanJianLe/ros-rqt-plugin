@@ -3,6 +3,8 @@
 #include <QStringList>
 
 
+PLUGINLIB_EXPORT_CLASS(ros_rqt_plugin::two_button_plugin, rqt_gui_cpp::Plugin);
+
 namespace ros_rqt_plugin
 {
     two_button_plugin::two_button_plugin()
@@ -74,5 +76,3 @@ namespace ros_rqt_plugin
     }
 
 } // namespace ros_rqt_plugin
-
-PLUGINLIB_EXPORT_CLASS(ros_rqt_plugin::two_button_plugin, rqt_gui_cpp::Plugin);

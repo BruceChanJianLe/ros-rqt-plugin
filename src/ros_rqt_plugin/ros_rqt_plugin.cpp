@@ -9,7 +9,8 @@ namespace ros_rqt_plugin
 {
     two_button_plugin::two_button_plugin()
     :   rqt_gui_cpp::Plugin(),
-        widget_(0)
+        widget_(0),
+        ui_(std::make_shared<Ui::two_button>())
     {
         // Constructor is called first before initPlugin function, needless to say.
         // give QObjects reasonable names
@@ -25,7 +26,7 @@ namespace ros_rqt_plugin
         widget_ = new QWidget();
 
         // Extend the widget with all attributes and children from UI file
-        ui_.setupUi(widget_);
+        ui_->setupUi(widget_);
 
         // add widget to the user interface
         context.addWidget(widget_);
@@ -38,8 +39,8 @@ namespace ros_rqt_plugin
         msg_.data = true;
 
         // Connect Qt Widgets
-        connect(ui_.pushButton_1, SIGNAL(pressed()), this, SLOT(button_1_callback_()));
-        connect(ui_.pushButton_2, SIGNAL(pressed()), this, SLOT(button_2_callback_()));
+        connect(ui_->pushButton_1, SIGNAL(pressed()), this, SLOT(button_1_callback_()));
+        connect(ui_->pushButton_2, SIGNAL(pressed()), this, SLOT(button_2_callback_()));
     }
 
     void two_button_plugin::shutdownPlugin()

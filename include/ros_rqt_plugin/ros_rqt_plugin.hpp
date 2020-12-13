@@ -7,6 +7,7 @@
 #include <QWidget>
 
 #include <std_msgs/Bool.h>
+#include <memory>
 
 
 namespace ros_rqt_plugin
@@ -32,7 +33,7 @@ namespace ros_rqt_plugin
         //void triggerConfiguration();
 
         private:
-            Ui::two_button ui_;
+            std::shared_ptr<Ui::two_button> ui_;
             QWidget * widget_;
 
         protected:

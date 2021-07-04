@@ -360,6 +360,23 @@ To obtain the header for `#include <ros_rqt_plugin/ui_ros_rqt_plugin.h>` please 
     "version": 4
 ```
 
+## Error
+
+Icon error:
+```bash
+UserWarning: icon “/opt/ros/melodic/share/rqt_virtual_joy/resource/input-gaming.png“ not found
+```
+
+Solution:
+```bash
+cd ~/Downloads
+git clone https://github.com/aquahika/rqt_virtual_joystick.git
+sudo cp -r ~/Downloads/rqt_virtual_joystick/resource /opt/ros/melodic/share/rqt_virtual_joy/
+rm -rf ~/Downloads/rqt_virtual_joystick
+```
+
+[reference_link](https://blog.csdn.net/qq_39531155/article/details/114679115)
+
 ## Reference
 
 - Video lesson on UI file. [link](https://www.youtube.com/watch?v=2mIyZX6x-S0)

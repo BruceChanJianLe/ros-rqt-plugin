@@ -14,6 +14,8 @@
         </group>
         <label>Two Push Example Buttons</label>
         <icon type="theme">applications-graphics</icon>
+        <!-- Reference Link -->
+        <!-- https://gist.github.com/peteristhegreat/c0ca6e1a57e5d4b9cd0bb1d7b3be1d6a -->
         <statustip>This is an example of two push buttons.</statustip>
         </qtgui>
     </class>

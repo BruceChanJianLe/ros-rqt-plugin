@@ -387,3 +387,5 @@ rm -rf ~/Downloads/rqt_virtual_joystick
 - reference to other people github tutorial if you are so incline. [link1](https://github.com/how-chen/rqt_mypkg) [link2](https://github.com/leggedrobotics/catkin_create_rqt)
 - Two List Selection [link](https://stackoverflow.com/questions/48327558/qt-implementation-of-selecting-items-from-list-into-other-list-dual-list-accum)
 - Icon list selection in rqt_gui [link](https://gist.github.com/peteristhegreat/c0ca6e1a57e5d4b9cd0bb1d7b3be1d6a)
+
+- Useful tutorial [link](https://www.programmersought.com/article/46843686253/)

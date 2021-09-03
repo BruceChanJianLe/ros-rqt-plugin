@@ -13,7 +13,7 @@ namespace ros_rqt_plugin
     {
         // Constructor is called first before initPlugin function, needless to say.
         // give QObjects reasonable names
-        setObjectName("ros_rqt_plugin");;
+        setObjectName("ros_rqt_plugin");
     }
 
     void two_button_plugin::initPlugin(qt_gui_cpp::PluginContext & context)

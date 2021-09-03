@@ -3,7 +3,7 @@
 
 #include <ros/ros.h>
 #include <rqt_gui_cpp/plugin.h>
-#include <ui_ros_rqt_plugin.h>
+#include <ros-rqt-plugin/ui_ros_rqt_plugin.h>
 #include <QWidget>
 
 #include <std_msgs/Bool.h>

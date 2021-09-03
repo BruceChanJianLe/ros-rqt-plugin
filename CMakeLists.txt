@@ -46,7 +46,7 @@ set(${PROJECT_NAME}_UIS
 # Define include directory
 set(${PROJECT_NAME}_INCLUDE_DIRECTORIES
   include
-  ${CMAKE_CURRENT_BINARY_DIR}
+  ${CMAKE_CURRENT_BINARY_DIR}/..
 )
 
 catkin_package(

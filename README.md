@@ -36,6 +36,7 @@ Note that plugin.xml class name should be unique in order for ROS to find it. Or
 1. Create and update src/ros_rqt_plugin/ros_rqt_plugin.cpp
 1. Compile (catkin_make)
 1. Create launch file (start.launch)
+1. Create src/ros_rqt_plugin and then touch __init__.py with chmod a+x (this is for binary installation)
 
 ## Package Creation
 
@@ -190,8 +191,12 @@ install(TARGETS ${PROJECT_NAME}
   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 )
 
-catkin_install_python(PROGRAMS scripts/${PROJECT_NAME}
+install(PROGRAMS scripts/${PROJECT_NAME}
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(PROGRAMS scripts/${PROJECT_NAME}
+  DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
 )
 
 install(DIRECTORY include/${PROJECT_NAME}/

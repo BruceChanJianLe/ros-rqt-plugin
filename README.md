@@ -393,4 +393,4 @@ rm -rf ~/Downloads/rqt_virtual_joystick
 - Two List Selection [link](https://stackoverflow.com/questions/48327558/qt-implementation-of-selecting-items-from-list-into-other-list-dual-list-accum)
 - Icon list selection in rqt_gui [link](https://gist.github.com/peteristhegreat/c0ca6e1a57e5d4b9cd0bb1d7b3be1d6a)
 
-- Useful tutorial [link]edhttps://www.programmersought.com/article/46843686253/)
+- Useful tutorial [link](https://www.programmersought.com/article/46843686253/)

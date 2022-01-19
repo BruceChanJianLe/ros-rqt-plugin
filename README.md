@@ -380,6 +380,13 @@ sudo cp -r ~/Downloads/rqt_virtual_joystick/resource /opt/ros/melodic/share/rqt_
 rm -rf ~/Downloads/rqt_virtual_joystick
 ```
 
+## Useful Commands
+
+```bash
+rqt --standalone package_exe
+rqt --list-plugins
+```
+
 [reference_link](https://blog.csdn.net/qq_39531155/article/details/114679115)
 
 ## Reference

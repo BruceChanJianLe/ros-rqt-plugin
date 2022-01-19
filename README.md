@@ -74,7 +74,7 @@ ros_rqt_plugin
 └── src
     └── ros_rqt_plugin
             ├── ros_rqt_plugin.cpp
-            └── ros_rqt_plugin.ui
+            └── __init__.py
 ```
 ## UI File
 
